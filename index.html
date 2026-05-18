@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Vision Hub — Restaurant Growth Marketing Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Hidden SVG noise filter -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="noiseFilter" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+        <feComponentTransfer in="grayNoise" result="fadedNoise">
+          <feFuncA type="linear" slope="0.06"/>
+        </feComponentTransfer>
+        <feBlend in="SourceGraphic" in2="fadedNoise" mode="overlay"/>
+      </filter>
+    </defs>
+  </svg>
+</head>
+<body>
+
+<!-- ── Scroll Progress ─────────────────────────────────── -->
+<div id="scrollProgress"></div>
+
+<!-- ── Film Grain Overlay ─────────────────────────────── -->
+<div id="grainOverlay" aria-hidden="true"></div>
+
+<!-- ── Floating Nav ───────────────────────────────────── -->
+<nav id="floatingNav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-wordmark">Marketing Vision Hub</div>
+    <div class="nav-links">
+      <a href="#section-growth">Services</a>
+      <a href="#section-showcase">Work</a>
+      <a href="#section-process">Process</a>
+      <a href="#section-contact">Contact</a>
+    </div>
+    <a href="#section-contact" class="nav-cta">Book Strategy Call</a>
+  </div>
+</nav>
+
+<!-- ── Page Root ──────────────────────────────────────── -->
+<div id="pageRoot">
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div id="bgWrap" aria-hidden="true">
+      <canvas id="bgCanvas"></canvas>
+      <div class="hero-depth-overlay"></div>
+    </div>
+
+    <!-- cinematic vignette top-left -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- Floating food icons -->
+    <div class="food-icons" aria-hidden="true">
+      <span class="food-icon" style="--fx:7%;--fy:18%;--fd:0s;--fs:1.5rem">🍕</span>
+      <span class="food-icon" style="--fx:88%;--fy:12%;--fd:1.4s;--fs:1.7rem">☕</span>
+      <span class="food-icon" style="--fx:93%;--fy:58%;--fd:0.7s;--fs:1.3rem">🍜</span>
+      <span class="food-icon" style="--fx:4%;--fy:74%;--fd:2.1s;--fs:1.4rem">🍷</span>
+      <span class="food-icon" style="--fx:76%;--fy:82%;--fd:1.8s;--fs:1.5rem">🎂</span>
+      <span class="food-icon" style="--fx:18%;--fy:88%;--fd:0.4s;--fs:1.2rem">🌮</span>
+      <span class="food-icon" style="--fx:52%;--fy:8%;--fd:2.8s;--fs:1.4rem">🍣</span>
+      <span class="food-icon" style="--fx:38%;--fy:92%;--fd:1.1s;--fs:1.3rem">🥗</span>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <!-- Eyebrow -->
+      <div class="eyebrow-row" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="eyebrow-label">Restaurant Growth Marketing Agency</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="hero-h1" data-reveal data-delay="100">
+        Helping Restaurants Turn<br />
+        <em>Attention</em> Into Revenue
+      </h1>
+
+      <!-- Supporting -->
+      <p class="hero-p" data-reveal data-delay="200">
+        We create viral food content, high-converting campaigns, and premium digital experiences that bring more customers through your doors.
+      </p>
+
+      <!-- CTA Row -->
+      <div class="cta-row" data-reveal data-delay="300">
+        <a href="#section-contact" class="btn-primary">
+          <span>Scale My Restaurant</span>
+          <span class="btn-glow" aria-hidden="true"></span>
+        </a>
+        <a href="#section-showcase" class="btn-secondary">
+          <span class="play-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+          </span>
+          See Our Work
+        </a>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row" data-reveal data-delay="400">
+        <div class="stat-col">
+          <div class="stat-number">5X+</div>
+          <div class="stat-label">Average ROAS</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-col">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Brands Scaled</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-col">
+          <div class="stat-number">₹10Cr+</div>
+          <div class="stat-label">Revenue Generated</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <span>REELS</span><span class="m-dot">◆</span>
+          <span>ADS</span><span class="m-dot">◆</span>
+          <span>CONTENT</span><span class="m-dot">◆</span>
+          <span>GROWTH</span><span class="m-dot">◆</span>
+          <span>INFLUENCERS</span><span class="m-dot">◆</span>
+          <span>WEBSITES</span><span class="m-dot">◆</span>
+          <span>REELS</span><span class="m-dot">◆</span>
+          <span>ADS</span><span class="m-dot">◆</span>
+          <span>CONTENT</span><span class="m-dot">◆</span>
+          <span>GROWTH</span><span class="m-dot">◆</span>
+          <span>INFLUENCERS</span><span class="m-dot">◆</span>
+          <span>WEBSITES</span><span class="m-dot">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Cue -->
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-text">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — WHO WE HELP
+  ═══════════════════════════════════════════ -->
+  <section id="section-who-help">
+    <div class="container">
+      <div class="section-eyebrow centered" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span>Who We Help</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="section-h2 centered" data-reveal data-delay="100">
+        Built for Every Kind of<br /><em>Food Brand</em>
+      </h2>
+      <p class="section-lead centered" data-reveal data-delay="150">
+        Whether you run a buzzing café or a growing cloud kitchen, we build the marketing engine your restaurant deserves.
+      </p>
+    </div>
+
+    <div class="help-cards-wrap">
+      <div class="help-cards-track">
+
+        <article class="card-3d help-card" data-reveal data-delay="0">
+          <div class="card-inner" style="--card-hue:28;">
+            <div class="card-noise" aria-hidden="true"></div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-reflection" aria-hidden="true"></div>
+            <div class="help-card-icon">🍽️</div>
+            <div class="card-content">
+              <h3 class="card-title">Fine Dining</h3>
+              <p class="card-desc">Elevate your brand with cinematic content and high-end digital presence.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-3d help-card" data-reveal data-delay="80">
+          <div class="card-inner" style="--card-hue:22;">
+            <div class="card-noise" aria-hidden="true"></div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-reflection" aria-hidden="true"></div>
+            <div class="help-card-icon">☕</div>
+            <div class="card-content">
+              <h3 class="card-title">Cafés</h3>
+              <p class="card-desc">Build a loyal community with viral content and influencer-led campaigns.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-3d help-card" data-reveal data-delay="160">
+          <div class="card-inner" style="--card-hue:35;">
+            <div class="card-noise" aria-hidden="true"></div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-reflection" aria-hidden="true"></div>
+            <div class="help-card-icon">📦</div>
+            <div class="card-content">
+              <h3 class="card-title">Cloud Kitchens</h3>
+              <p class="card-desc">Dominate Zomato & Swiggy with listing optimization and ROAS-focused ad campaigns.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-3d help-card" data-reveal data-delay="240">
+          <div class="card-inner" style="--card-hue:15;">
+            <div class="card-noise" aria-hidden="true"></div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-reflection" aria-hidden="true"></div>
+            <div class="help-card-icon">🎂</div>
+            <div class="card-content">
+              <h3 class="card-title">Dessert Brands</h3>
+              <p class="card-desc">Create irresistible, shareable content that turns followers into paying customers.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-3d help-card" data-reveal data-delay="320">
+          <div class="card-inner" style="--card-hue:42;">
+            <div class="card-noise" aria-hidden="true"></div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-reflection" aria-hidden="true"></div>
+            <div class="help-card-icon">🍔</div>
+            <div class="card-content">
+              <h3 class="card-title">Fast Casual</h3>
+              <p class="card-desc">Scale your daily orders with performance-driven ads and retention funnels.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — GROWTH SYSTEMS
+  ═══════════════════════════════════════════ -->
+  <section id="section-growth">
+    <div class="container">
+      <div class="section-eyebrow centered" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span>Growth Systems</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="section-h2 centered" data-reveal data-delay="100">
+        Everything Your Restaurant<br /><em>Needs to Dominate</em>
+      </h2>
+
+      <div class="bento-grid">
+
+        <div class="bento-cell bento-wide" data-reveal data-delay="0">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">🎬</div>
+          <h3 class="bento-title">Viral Reels Strategy</h3>
+          <p class="bento-p">Scroll-stopping short-form content built around your restaurant's story — from kitchen reveals to trend-riding food videos that earn millions of organic views.</p>
+          <div class="bento-tag">Social Content</div>
+        </div>
+
+        <div class="bento-cell bento-tall" data-reveal data-delay="80">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">🤝</div>
+          <h3 class="bento-title">Food Influencer Campaigns</h3>
+          <p class="bento-p">End-to-end influencer management — scouting, outreach, briefing, and results reporting for micro and macro food creators.</p>
+          <div class="bento-tag">Influencer</div>
+        </div>
+
+        <div class="bento-cell" data-reveal data-delay="120">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">📈</div>
+          <h3 class="bento-title">Meta & Google Ads</h3>
+          <p class="bento-p">Performance-first paid campaigns with full-funnel tracking and ROAS accountability.</p>
+          <div class="bento-tag">Paid Ads</div>
+        </div>
+
+        <div class="bento-cell" data-reveal data-delay="160">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">📦</div>
+          <h3 class="bento-title">Delivery App Optimization</h3>
+          <p class="bento-p">Listing strategy, sponsored placements, and menu conversion design to dominate Zomato & Swiggy.</p>
+          <div class="bento-tag">Delivery</div>
+        </div>
+
+        <div class="bento-cell bento-wide" data-reveal data-delay="200">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">💻</div>
+          <h3 class="bento-title">Conversion-Focused Websites</h3>
+          <p class="bento-p">Premium restaurant websites engineered to convert visitors into loyal, repeat customers — with seamless ordering integrations, premium food photography, and cinematic design.</p>
+          <div class="bento-tag">Web</div>
+        </div>
+
+        <div class="bento-cell bento-tall" data-reveal data-delay="240">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">🔄</div>
+          <h3 class="bento-title">Retention & Loyalty Campaigns</h3>
+          <p class="bento-p">WhatsApp automations, loyalty programs, and repeat-visit campaigns that compound customer lifetime value month over month.</p>
+          <div class="bento-tag">Retention</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — CREATIVE SHOWCASE
+  ═══════════════════════════════════════════ -->
+  <section id="section-showcase">
+    <div class="container">
+      <div class="section-eyebrow centered" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span>Creative Showcase</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="section-h2 centered" data-reveal data-delay="100">
+        Campaigns That Make<br /><em>Restaurants Unforgettable</em>
+      </h2>
+    </div>
+
+    <div class="showcase-stage" data-reveal data-delay="200">
+      <!-- Phone mockup -->
+      <div class="mockup mockup-phone">
+        <div class="mockup-frame">
+          <div class="mockup-notch" aria-hidden="true"></div>
+          <div class="mockup-screen">
+            <div class="reel-preview">
+              <div class="reel-gradient" aria-hidden="true"></div>
+              <div class="reel-ui">
+                <div class="reel-play" aria-hidden="true">▶</div>
+                <div class="reel-stats" aria-hidden="true">
+                  <span>❤ 24.8K</span>
+                  <span>💬 847</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-label">Viral Reel Campaign</div>
+      </div>
+
+      <!-- Browser mockup -->
+      <div class="mockup mockup-browser">
+        <div class="mockup-frame">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="bb-dot" style="background:#ff5f57"></span>
+            <span class="bb-dot" style="background:#febc2e"></span>
+            <span class="bb-dot" style="background:#28c840"></span>
+            <span class="bb-url">yourrestaurant.com</span>
+          </div>
+          <div class="mockup-screen browser-screen">
+            <div class="bs-header" aria-hidden="true">
+              <div class="bs-nav"></div>
+              <div class="bs-hero"></div>
+            </div>
+            <div class="bs-body" aria-hidden="true">
+              <div class="bs-block"></div>
+              <div class="bs-block bs-block--sm"></div>
+              <div class="bs-block bs-block--sm"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-label">Premium Restaurant Website</div>
+      </div>
+
+      <!-- Social ad mockup -->
+      <div class="mockup mockup-social">
+        <div class="mockup-frame">
+          <div class="mockup-screen social-screen">
+            <div class="social-top" aria-hidden="true">
+              <div class="social-avatar"></div>
+              <div class="social-meta">
+                <div class="social-name"></div>
+                <div class="social-sub"></div>
+              </div>
+              <div class="social-badge">Sponsored</div>
+            </div>
+            <div class="social-img" aria-hidden="true">
+              <div class="social-img-gradient"></div>
+              <div class="social-img-tag">🔥 Now Open</div>
+            </div>
+            <div class="social-footer" aria-hidden="true">
+              <div class="social-cta-btn">Order Now →</div>
+              <div class="social-metrics">4.8× ROAS · 12K Reach</div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-label">High-ROAS Ad Campaign</div>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="mockup mockup-dash">
+        <div class="mockup-frame">
+          <div class="mockup-screen dash-screen">
+            <div class="dash-title" aria-hidden="true">Campaign Performance</div>
+            <div class="dash-kpis" aria-hidden="true">
+              <div class="dash-kpi"><span class="dk-num">5.1×</span><span class="dk-lbl">ROAS</span></div>
+              <div class="dash-kpi"><span class="dk-num">₹2.4L</span><span class="dk-lbl">Revenue</span></div>
+              <div class="dash-kpi"><span class="dk-num">38%</span><span class="dk-lbl">CTR↑</span></div>
+            </div>
+            <div class="dash-chart" aria-hidden="true">
+              <div class="dc-bar" style="--bh:55%"></div>
+              <div class="dc-bar" style="--bh:72%"></div>
+              <div class="dc-bar" style="--bh:48%"></div>
+              <div class="dc-bar" style="--bh:88%"></div>
+              <div class="dc-bar" style="--bh:65%"></div>
+              <div class="dc-bar" style="--bh:94%"></div>
+              <div class="dc-bar" style="--bh:78%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-label">Ads Dashboard</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — HOW WE SCALE (PROCESS TIMELINE)
+  ═══════════════════════════════════════════ -->
+  <section id="section-process">
+    <div class="container">
+      <div class="section-eyebrow centered" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span>How We Scale</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="section-h2 centered" data-reveal data-delay="100">
+        From Zero to<br /><em>Unstoppable Growth</em>
+      </h2>
+
+      <div class="process-timeline">
+
+        <div class="process-step" data-reveal data-delay="0">
+          <div class="ps-number">01</div>
+          <div class="ps-connector" aria-hidden="true"><div class="ps-line"></div></div>
+          <div class="ps-card">
+            <h3 class="ps-title">Strategy</h3>
+            <p class="ps-desc">Deep-dive audit of your brand, competitors, and market. We build a custom growth roadmap tailored to your restaurant's goals.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-reveal data-delay="120">
+          <div class="ps-number">02</div>
+          <div class="ps-connector" aria-hidden="true"><div class="ps-line"></div></div>
+          <div class="ps-card">
+            <h3 class="ps-title">Content Creation</h3>
+            <p class="ps-desc">We craft viral reels, cinematic food photography, influencer campaigns, and premium ad creatives that stop the scroll.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-reveal data-delay="240">
+          <div class="ps-number">03</div>
+          <div class="ps-connector" aria-hidden="true"><div class="ps-line"></div></div>
+          <div class="ps-card">
+            <h3 class="ps-title">Paid Ads Launch</h3>
+            <p class="ps-desc">Precision-targeted Meta, Google, and delivery platform campaigns go live with full tracking, attribution, and ROAS dashboards.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-reveal data-delay="360">
+          <div class="ps-number">04</div>
+          <div class="ps-connector last" aria-hidden="true"></div>
+          <div class="ps-card">
+            <h3 class="ps-title">Scale & Optimize</h3>
+            <p class="ps-desc">Weekly optimization cycles, data-driven creative iteration, and retention loops compound your growth month after month.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — RESULTS / KPI PANELS
+  ═══════════════════════════════════════════ -->
+  <section id="section-results">
+    <div class="results-bg-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-eyebrow centered" data-reveal>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span>What We Drive</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="section-h2 centered" data-reveal data-delay="100">
+        Real Impact,<br /><em>Measurable Results</em>
+      </h2>
+
+      <div class="kpi-grid">
+
+        <div class="kpi-card" data-reveal data-delay="0">
+          <div class="kpi-icon">📱</div>
+          <div class="kpi-number" data-counter="340" data-suffix="%">0</div>
+          <div class="kpi-title">More Online Orders</div>
+          <p class="kpi-desc">Average increase in delivery orders within the first 90 days across our restaurant partners.</p>
+          <div class="kpi-bar"><div class="kpi-bar-fill" style="--w:85%"></div></div>
+        </div>
+
+        <div class="kpi-card" data-reveal data-delay="80">
+          <div class="kpi-icon">🔁</div>
+          <div class="kpi-number" data-counter="68" data-suffix="%">0</div>
+          <div class="kpi-title">Higher Customer Retention</div>
+          <p class="kpi-desc">Of first-time customers return within 30 days when our retention systems are active.</p>
+          <div class="kpi-bar"><div class="kpi-bar-fill" style="--w:68%"></div></div>
+        </div>
+
+        <div class="kpi-card" data-reveal data-delay="160">
+          <div class="kpi-icon">📉</div>
+          <div class="kpi-number" data-counter="42" data-suffix="%">0</div>
+          <div class="kpi-title">Lower Cost Per Acquisition</div>
+          <p class="kpi-desc">Average reduction in CAC after the first 60 days of optimized paid ad management.</p>
+          <div class="kpi-bar"><div class="kpi-bar-fill" style="--w:42%"></div></div>
+        </div>
+
+        <div class="kpi-card" data-reveal data-delay="240">
+          <div class="kpi-icon">👁️</div>
+          <div class="kpi-number" data-counter="2.8" data-suffix="M+">0</div>
+          <div class="kpi-title">Better Brand Visibility</div>
+          <p class="kpi-desc">Monthly organic views generated across social media for our restaurant partners.</p>
+          <div class="kpi-bar"><div class="kpi-bar-fill" style="--w:92%"></div></div>
+        </div>
+
+        <div class="kpi-card kpi-card--wide" data-reveal data-delay="320">
+          <div class="kpi-wide-left">
+            <div class="kpi-icon">⭐</div>
+            <div class="kpi-number" data-counter="5" data-suffix="X+">0</div>
+            <div class="kpi-title">Average ROAS</div>
+            <p class="kpi-desc">Every rupee of ad spend returns 5× or more in revenue across our managed campaigns.</p>
+          </div>
+          <div class="kpi-wide-right" aria-hidden="true">
+            <div class="kpi-chart">
+              <div class="kc-bar" style="--kbh:40%"><span>Jan</span></div>
+              <div class="kc-bar" style="--kbh:55%"><span>Feb</span></div>
+              <div class="kc-bar" style="--kbh:48%"><span>Mar</span></div>
+              <div class="kc-bar" style="--kbh:72%"><span>Apr</span></div>
+              <div class="kc-bar" style="--kbh:88%"><span>May</span></div>
+              <div class="kc-bar" style="--kbh:95%"><span>Jun</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — FINAL CTA
+  ═══════════════════════════════════════════ -->
+  <section id="section-cta-banner">
+    <div class="cta-banner-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-banner-inner" data-reveal>
+        <div class="cta-banner-left">
+          <div class="section-eyebrow" data-reveal>
+            <span class="eyebrow-accent-line" aria-hidden="true"></span>
+            <span>Let's Talk Growth</span>
+          </div>
+          <h2 class="cta-banner-h2" data-reveal data-delay="100">
+            Ready To Grow<br />Your <em>Restaurant?</em>
+          </h2>
+          <p class="cta-banner-p" data-reveal data-delay="200">
+            Book a free strategy session. We'll analyse your brand, identify your biggest growth levers, and show you exactly how we'd scale your restaurant.
+          </p>
+        </div>
+        <div class="cta-banner-right" data-reveal data-delay="300">
+          <a href="#section-contact" class="btn-primary btn-primary--large">
+            <span>Book a Free Strategy Call</span>
+            <span class="btn-glow" aria-hidden="true"></span>
+          </a>
+          <p class="cta-banner-note">No commitment required · 100% free</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION — CONTACT / MAILCHIMP FORM
+  ═══════════════════════════════════════════ -->
+  <section id="section-contact">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-left" data-parallax-layer data-speed="0.04">
+          <div class="section-eyebrow" data-reveal>
+            <span class="eyebrow-accent-line" aria-hidden="true"></span>
+            <span>Start Growing</span>
+          </div>
+          <h2 class="contact-h2" data-reveal data-delay="100">
+            Ready to Grow<br />Your <em>Restaurant?</em>
+          </h2>
+          <p class="contact-p" data-reveal data-delay="200">
+            Book a free strategy call with our restaurant marketing experts. We'll audit your current marketing, identify revenue gaps, and present a tailored growth plan — at zero cost to you.
+          </p>
+          <div class="contact-promises" data-reveal data-delay="300">
+            <div class="promise-item">
+              <span class="promise-dot" aria-hidden="true"></span>
+              <span>Free 30-minute strategy session</span>
+            </div>
+            <div class="promise-item">
+              <span class="promise-dot" aria-hidden="true"></span>
+              <span>Custom growth plan for your restaurant</span>
+            </div>
+            <div class="promise-item">
+              <span class="promise-dot" aria-hidden="true"></span>
+              <span>No commitment required</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right" data-reveal data-delay="200">
+          <div class="form-card">
+            <div class="form-card-header">
+              <h3 class="form-card-title">Book Your Free Strategy Call</h3>
+              <p class="form-card-sub">Fill in your details and our team will reach out within 24 hours.</p>
+            </div>
+
+            <!-- Mailchimp Embedded Form -->
+            <div id="mc_embed_signup">
+              <form action="https://gmail.us18.list-manage.com/subscribe/post?u=b087edb8372a5d5a49b296cb9&amp;id=4aefb4b4de&amp;f_id=00ffabe6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div id="mc_embed_signup_scroll">
+
+                  <div class="mc-field-group">
+                    <label for="mce-MMERGE7">Full Name <span class="asterisk">*</span></label>
+                    <input type="text" name="MMERGE7" class="required text" id="mce-MMERGE7" required value="" placeholder="Your full name" />
+                  </div>
+
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" placeholder="you@restaurant.com" />
+                  </div>
+
+                  <div class="mc-field-group">
+                    <label for="mce-PHONE">Phone Number <span class="asterisk">*</span></label>
+                    <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="" placeholder="+91 98765 43210" />
+                  </div>
+
+                  <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display:none;"></div>
+                    <div class="response" id="mce-success-response" style="display:none;"></div>
+                  </div>
+
+                  <!-- Anti-bot honeypot -->
+                  <div aria-hidden="true" style="position:absolute;left:-5000px;">
+                    <input type="text" name="b_b087edb8372a5d5a49b296cb9_4aefb4b4de" tabindex="-1" value="" />
+                  </div>
+
+                  <div class="form-submit-row">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-form-submit" value="Book My Free Strategy Call" />
+                  </div>
+
+                </div>
+              </form>
+            </div>
+            <!-- /Mailchimp -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer id="siteFooter">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-wordmark">Marketing Vision Hub</div>
+          <p class="footer-tagline">India's Premium Restaurant Growth Marketing Agency</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="#section-growth">Social Media</a>
+            <a href="#section-growth">Paid Ads</a>
+            <a href="#section-growth">Influencer</a>
+            <a href="#section-growth">Retention</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Company</div>
+            <a href="#section-who-help">Who We Help</a>
+            <a href="#section-results">Results</a>
+            <a href="#section-process">Process</a>
+            <a href="#section-contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Marketing Vision Hub. All rights reserved.</span>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <span>Est. 2020 · India</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#pageRoot -->
+
+<!-- ── Liquid Fill (bottom scroll trigger) ─────────── -->
+<div id="liquidFill" aria-hidden="true"></div>
+
+<!-- Mailchimp Scripts -->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+(function($) {
+  window.fnames = new Array(); window.ftypes = new Array();
+  fnames[0]='EMAIL'; ftypes[0]='email';
+  fnames[4]='PHONE'; ftypes[4]='phone';
+  fnames[7]='MMERGE7'; ftypes[7]='text';
+}(jQuery));
+var $mcj = jQuery.noConflict(true);
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

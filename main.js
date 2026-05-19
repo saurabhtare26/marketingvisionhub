@@ -4,6 +4,42 @@
 
 'use strict';
 
+/* ── Custom Cursor ─────────────────────────────────── */
+(function initCursor() {
+  const glow = document.getElementById('cursorGlow');
+  const dot  = document.getElementById('cursorDot');
+  if (!glow || !dot) return;
+
+  /* Check touch device — disable cursor on touch */
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+
+  let mx = -1000, my = -1000;
+  let gx = -1000, gy = -1000;
+  let rafId;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  }, { passive: true });
+
+  function tickGlow() {
+    gx += (mx - gx) * 0.09;
+    gy += (my - gy) * 0.09;
+    glow.style.left = gx + 'px';
+    glow.style.top  = gy + 'px';
+    rafId = requestAnimationFrame(tickGlow);
+  }
+  tickGlow();
+
+  /* Expand dot on interactive element hover */
+  document.querySelectorAll('a, button, .btn-primary, .btn-secondary, .card-3d, .bento-cell').forEach(el => {
+    el.addEventListener('mouseenter', () => dot.style.transform = 'translate(-50%,-50%) scale(2.5)');
+    el.addEventListener('mouseleave', () => dot.style.transform = 'translate(-50%,-50%) scale(1)');
+  });
+})();
+
 /* ── Scroll Progress Bar ─────────────────────────────── */
 (function initScrollProgress() {
   const bar = document.getElementById('scrollProgress');
@@ -245,9 +281,11 @@
   const icons   = hero ? hero.querySelector('.food-icons') : null;
   if (!hero || !content) return;
 
+  const left  = content.querySelector('.hero-left');
+  const right = content.querySelector('.hero-right');
+
   let targetX = 0, targetY = 0;
   let currentX = 0, currentY = 0;
-  let rafId;
 
   hero.addEventListener('mousemove', e => {
     const rect = hero.getBoundingClientRect();
@@ -266,20 +304,19 @@
     const cx = currentX * 18;
     const cy = currentY * 12;
 
-    content.style.transform = `translate(${cx * 0.5}px, ${cy * 0.5}px)`;
-    if (icons) icons.style.transform = `translate(${cx * 1.4}px, ${cy * 1.2}px)`;
+    if (left)  left.style.transform  = `translate(${cx * 0.4}px, ${cy * 0.35}px)`;
+    if (right) right.style.transform = `translate(${cx * -0.6}px, ${cy * -0.5}px)`;
 
-    rafId = requestAnimationFrame(tick);
+    requestAnimationFrame(tick);
   }
 
   tick();
 })();
 
-/* ── KPI Bar Fill Animation ──────────────────────────── */
+/* ── KPI Bar Fill + Dashboard Bar Animation ──────────── */
 (function initKpiBars() {
-  const bars = document.querySelectorAll('.kpi-bar-fill');
-  const chartBars = document.querySelectorAll('.kc-bar');
-  if (!bars.length && !chartBars.length) return;
+  const targets = document.querySelectorAll('.kpi-bar-fill, .kc-bar, .cgdbr-fill');
+  if (!targets.length) return;
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -287,10 +324,9 @@
       entry.target.classList.add('animated');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.2 });
 
-  bars.forEach(el => observer.observe(el));
-  chartBars.forEach(el => observer.observe(el));
+  targets.forEach(el => observer.observe(el));
 })();
 
 /* ── Liquid Fill — bottom scroll trigger ─────────────── */

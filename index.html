@@ -26,6 +26,10 @@
 </head>
 <body>
 
+<!-- Custom Cursor -->
+<div id="cursorGlow" aria-hidden="true"></div>
+<div id="cursorDot" aria-hidden="true"></div>
+
 <!-- ── Scroll Progress ─────────────────────────────────── -->
 <div id="scrollProgress"></div>
 
@@ -61,65 +65,91 @@
     <!-- cinematic vignette top-left -->
     <div class="hero-vignette" aria-hidden="true"></div>
 
-    <!-- Floating food icons -->
-    <div class="food-icons" aria-hidden="true">
-      <span class="food-icon" style="--fx:7%;--fy:18%;--fd:0s;--fs:1.5rem">🍕</span>
-      <span class="food-icon" style="--fx:88%;--fy:12%;--fd:1.4s;--fs:1.7rem">☕</span>
-      <span class="food-icon" style="--fx:93%;--fy:58%;--fd:0.7s;--fs:1.3rem">🍜</span>
-      <span class="food-icon" style="--fx:4%;--fy:74%;--fd:2.1s;--fs:1.4rem">🍷</span>
-      <span class="food-icon" style="--fx:76%;--fy:82%;--fd:1.8s;--fs:1.5rem">🎂</span>
-      <span class="food-icon" style="--fx:18%;--fy:88%;--fd:0.4s;--fs:1.2rem">🌮</span>
-      <span class="food-icon" style="--fx:52%;--fy:8%;--fd:2.8s;--fs:1.4rem">🍣</span>
-      <span class="food-icon" style="--fx:38%;--fy:92%;--fd:1.1s;--fs:1.3rem">🥗</span>
-    </div>
+    <!-- Ambient hero orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
 
-    <div class="hero-content" id="heroContent">
-      <!-- Eyebrow -->
-      <div class="eyebrow-row" data-reveal>
-        <span class="eyebrow-accent-line" aria-hidden="true"></span>
-        <span class="eyebrow-label">Restaurant Growth Marketing Agency</span>
+    <div class="hero-inner" id="heroContent">
+      <!-- Left: Content -->
+      <div class="hero-left">
+        <div class="eyebrow-row" data-reveal>
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-label">Restaurant Growth Marketing Agency</span>
+        </div>
+        <h1 class="hero-h1" data-reveal data-delay="100">
+          Helping Restaurants Turn<br /><em>Attention</em> Into Revenue
+        </h1>
+        <p class="hero-p" data-reveal data-delay="200">
+          We create scroll-stopping food content, high-converting campaigns, and premium digital experiences that turn restaurants into brands people crave.
+        </p>
+        <div class="cta-row" data-reveal data-delay="300">
+          <a href="#section-contact" class="btn-primary">
+            <span>Grow My Restaurant</span>
+            <span class="btn-glow" aria-hidden="true"></span>
+          </a>
+          <a href="#section-showcase" class="btn-secondary">
+            <span class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+            </span>
+            Explore Our Work
+          </a>
+        </div>
+        <div class="stats-row" data-reveal data-delay="400">
+          <div class="stat-col">
+            <div class="stat-number">5X+</div>
+            <div class="stat-label">Average ROAS</div>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-col">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Brands Scaled</div>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-col">
+            <div class="stat-number">₹10Cr+</div>
+            <div class="stat-label">Revenue Generated</div>
+          </div>
+        </div>
       </div>
 
-      <!-- H1 -->
-      <h1 class="hero-h1" data-reveal data-delay="100">
-        Helping Restaurants Turn<br />
-        <em>Attention</em> Into Revenue
-      </h1>
-
-      <!-- Supporting -->
-      <p class="hero-p" data-reveal data-delay="200">
-        We create viral food content, high-converting campaigns, and premium digital experiences that bring more customers through your doors.
-      </p>
-
-      <!-- CTA Row -->
-      <div class="cta-row" data-reveal data-delay="300">
-        <a href="#section-contact" class="btn-primary">
-          <span>Scale My Restaurant</span>
-          <span class="btn-glow" aria-hidden="true"></span>
-        </a>
-        <a href="#section-showcase" class="btn-secondary">
-          <span class="play-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
-          </span>
-          See Our Work
-        </a>
-      </div>
-
-      <!-- Stats Row -->
-      <div class="stats-row" data-reveal data-delay="400">
-        <div class="stat-col">
-          <div class="stat-number">5X+</div>
-          <div class="stat-label">Average ROAS</div>
+      <!-- Right: Floating 3D UI Elements -->
+      <div class="hero-right" data-reveal data-delay="500" aria-hidden="true">
+        <div class="hf-phone hf-card">
+          <div class="hf-phone-notch"></div>
+          <div class="hf-phone-screen">
+            <img class="hf-reel-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=220&q=80" alt="" loading="lazy" />
+            <div class="hf-reel-bg"></div>
+            <div class="hf-reel-overlay">
+              <div class="hf-reel-play">▶</div>
+              <div class="hf-reel-stats">
+                <span>❤ 24.8K</span><span>💬 847</span><span>↗ 12K</span>
+              </div>
+            </div>
+            <div class="hf-reel-label">Viral Reel · 2.4M Views</div>
+          </div>
         </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-col">
-          <div class="stat-number">120+</div>
-          <div class="stat-label">Brands Scaled</div>
+        <div class="hf-analytics hf-card">
+          <div class="hf-a-header"><span class="hf-a-dot"></span>Campaign Performance</div>
+          <div class="hf-a-kpis">
+            <div class="hf-kpi"><span class="hf-kpi-val">5.1×</span><span class="hf-kpi-lbl">ROAS</span></div>
+            <div class="hf-kpi"><span class="hf-kpi-val">₹2.4L</span><span class="hf-kpi-lbl">Revenue</span></div>
+            <div class="hf-kpi"><span class="hf-kpi-val">+38%</span><span class="hf-kpi-lbl">CTR</span></div>
+          </div>
+          <div class="hf-a-chart">
+            <div class="hf-bar" style="--bh:45%"></div>
+            <div class="hf-bar" style="--bh:62%"></div>
+            <div class="hf-bar" style="--bh:54%"></div>
+            <div class="hf-bar" style="--bh:78%"></div>
+            <div class="hf-bar" style="--bh:91%"></div>
+            <div class="hf-bar hf-bar-active" style="--bh:100%"></div>
+          </div>
         </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-col">
-          <div class="stat-number">₹10Cr+</div>
-          <div class="stat-label">Revenue Generated</div>
+        <div class="hf-badge hf-card">
+          <div class="hf-badge-icon">⭐</div>
+          <div class="hf-badge-text">
+            <div class="hf-badge-num">120+</div>
+            <div class="hf-badge-sub">Restaurants Scaled</div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +176,6 @@
 
     <!-- Scroll Cue -->
     <div class="scroll-cue" aria-hidden="true">
-      <span class="scroll-text">SCROLL</span>
       <div class="scroll-line"></div>
     </div>
   </section>
@@ -155,6 +184,7 @@
        SECTION — WHO WE HELP
   ═══════════════════════════════════════════ -->
   <section id="section-who-help">
+    <div class="section-ambient-orb" aria-hidden="true"></div>
     <div class="container">
       <div class="section-eyebrow centered" data-reveal>
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
@@ -177,7 +207,7 @@
             <div class="card-noise" aria-hidden="true"></div>
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-reflection" aria-hidden="true"></div>
-            <div class="help-card-icon">🍽️</div>
+            <div class="help-card-visual"><img class="help-card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=320&q=82" alt="" loading="lazy" /><div class="help-card-icon-badge">🍽️</div></div>
             <div class="card-content">
               <h3 class="card-title">Fine Dining</h3>
               <p class="card-desc">Elevate your brand with cinematic content and high-end digital presence.</p>
@@ -190,7 +220,7 @@
             <div class="card-noise" aria-hidden="true"></div>
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-reflection" aria-hidden="true"></div>
-            <div class="help-card-icon">☕</div>
+            <div class="help-card-visual"><img class="help-card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=320&q=82" alt="" loading="lazy" /><div class="help-card-icon-badge">☕</div></div>
             <div class="card-content">
               <h3 class="card-title">Cafés</h3>
               <p class="card-desc">Build a loyal community with viral content and influencer-led campaigns.</p>
@@ -203,7 +233,7 @@
             <div class="card-noise" aria-hidden="true"></div>
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-reflection" aria-hidden="true"></div>
-            <div class="help-card-icon">📦</div>
+            <div class="help-card-visual"><img class="help-card-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=320&q=82" alt="" loading="lazy" /><div class="help-card-icon-badge">📦</div></div>
             <div class="card-content">
               <h3 class="card-title">Cloud Kitchens</h3>
               <p class="card-desc">Dominate Zomato & Swiggy with listing optimization and ROAS-focused ad campaigns.</p>
@@ -216,7 +246,7 @@
             <div class="card-noise" aria-hidden="true"></div>
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-reflection" aria-hidden="true"></div>
-            <div class="help-card-icon">🎂</div>
+            <div class="help-card-visual"><img class="help-card-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=320&q=82" alt="" loading="lazy" /><div class="help-card-icon-badge">🎂</div></div>
             <div class="card-content">
               <h3 class="card-title">Dessert Brands</h3>
               <p class="card-desc">Create irresistible, shareable content that turns followers into paying customers.</p>
@@ -229,7 +259,7 @@
             <div class="card-noise" aria-hidden="true"></div>
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-reflection" aria-hidden="true"></div>
-            <div class="help-card-icon">🍔</div>
+            <div class="help-card-visual"><img class="help-card-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=320&q=82" alt="" loading="lazy" /><div class="help-card-icon-badge">🍔</div></div>
             <div class="card-content">
               <h3 class="card-title">Fast Casual</h3>
               <p class="card-desc">Scale your daily orders with performance-driven ads and retention funnels.</p>
@@ -245,6 +275,7 @@
        SECTION — GROWTH SYSTEMS
   ═══════════════════════════════════════════ -->
   <section id="section-growth">
+    <div class="section-ambient-orb section-ambient-orb--right" aria-hidden="true"></div>
     <div class="container">
       <div class="section-eyebrow centered" data-reveal>
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
@@ -289,7 +320,15 @@
           <div class="bento-tag">Delivery</div>
         </div>
 
-        <div class="bento-cell bento-wide" data-reveal data-delay="200">
+        <div class="bento-cell" data-reveal data-delay="180">
+          <div class="bento-glow-orb" aria-hidden="true"></div>
+          <div class="bento-icon">📱</div>
+          <h3 class="bento-title">Social Media Marketing</h3>
+          <p class="bento-p">Full-service Instagram, Facebook & YouTube management — content calendars, community engagement, and hashtag strategies that build loyal food audiences and drive footfall.</p>
+          <div class="bento-tag">Social</div>
+        </div>
+
+        <div class="bento-cell bento-wide" data-reveal data-delay="220">
           <div class="bento-glow-orb" aria-hidden="true"></div>
           <div class="bento-icon">💻</div>
           <h3 class="bento-title">Conversion-Focused Websites</h3>
@@ -320,103 +359,131 @@
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
       </div>
       <h2 class="section-h2 centered" data-reveal data-delay="100">
-        Campaigns That Make<br /><em>Restaurants Unforgettable</em>
+        Work That Makes<br /><em>Restaurants Crave-Worthy</em>
       </h2>
     </div>
 
-    <div class="showcase-stage" data-reveal data-delay="200">
-      <!-- Phone mockup -->
-      <div class="mockup mockup-phone">
-        <div class="mockup-frame">
-          <div class="mockup-notch" aria-hidden="true"></div>
-          <div class="mockup-screen">
-            <div class="reel-preview">
-              <div class="reel-gradient" aria-hidden="true"></div>
-              <div class="reel-ui">
-                <div class="reel-play" aria-hidden="true">▶</div>
-                <div class="reel-stats" aria-hidden="true">
-                  <span>❤ 24.8K</span>
-                  <span>💬 847</span>
-                </div>
+    <div class="creative-grid">
+
+      <!-- REEL PANEL -->
+      <div class="cg-reel cg-panel" data-reveal data-delay="0">
+        <div class="cg-reel-bg">
+          <img class="cgr-bg-img" src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=420&q=85" alt="" loading="lazy" />
+          <div class="cgr-depth-1"></div>
+          <div class="cgr-depth-2"></div>
+          <div class="cgr-overlay">
+            <div class="cgr-top">
+              <div class="cgr-profile">
+                <div class="cgr-avatar">AP</div>
+                <span class="cgr-handle">@artisanplate</span>
+              </div>
+              <div class="cgr-follow-btn">Follow</div>
+            </div>
+            <div class="cgr-play">▶</div>
+            <div class="cgr-bottom">
+              <div class="cgr-caption">"When tasty food hits different 😍 #foodie #viral"</div>
+              <div class="cgr-music">♪ Original Audio · 2.4M plays</div>
+              <div class="cgr-stats">
+                <div class="cgr-stat"><span>❤</span><span>24.8K</span></div>
+                <div class="cgr-stat"><span>💬</span><span>847</span></div>
+                <div class="cgr-stat"><span>↗</span><span>12K</span></div>
               </div>
             </div>
           </div>
+          <div class="cgr-views-badge">2.4M Organic Views</div>
         </div>
-        <div class="mockup-label">Viral Reel Campaign</div>
+        <div class="cg-label">Viral Reel Campaign</div>
       </div>
 
-      <!-- Browser mockup -->
-      <div class="mockup mockup-browser">
-        <div class="mockup-frame">
-          <div class="browser-bar" aria-hidden="true">
-            <span class="bb-dot" style="background:#ff5f57"></span>
-            <span class="bb-dot" style="background:#febc2e"></span>
-            <span class="bb-dot" style="background:#28c840"></span>
-            <span class="bb-url">yourrestaurant.com</span>
+      <!-- WEBSITE PANEL -->
+      <div class="cg-website cg-panel" data-reveal data-delay="80">
+        <div class="cgw-chrome">
+          <div class="cgw-dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div>
+          <div class="cgw-url">theartisanplate.com</div>
+        </div>
+        <div class="cgw-nav-bar">
+          <div class="cgw-brand">The Artisan Plate</div>
+          <div class="cgw-nav-links"><span>Menu</span><span>Reserve</span><span>Gallery</span></div>
+          <div class="cgw-nav-cta">Book Table</div>
+        </div>
+        <div class="cgw-hero">
+          <div class="cgw-hero-visual">
+            <img class="cgw-food-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=640&q=85" alt="" loading="lazy" />
+            <div class="cgwh-gradient"></div>
           </div>
-          <div class="mockup-screen browser-screen">
-            <div class="bs-header" aria-hidden="true">
-              <div class="bs-nav"></div>
-              <div class="bs-hero"></div>
-            </div>
-            <div class="bs-body" aria-hidden="true">
-              <div class="bs-block"></div>
-              <div class="bs-block bs-block--sm"></div>
-              <div class="bs-block bs-block--sm"></div>
-            </div>
+          <div class="cgw-hero-content">
+            <div class="cgwh-label">Est. 2018 · Mumbai</div>
+            <div class="cgwh-title">Fine Dining<br/>Reimagined</div>
+            <div class="cgwh-sub">A curated experience for the discerning palate</div>
+            <div class="cgwh-cta">Reserve Your Table →</div>
           </div>
         </div>
-        <div class="mockup-label">Premium Restaurant Website</div>
+        <div class="cgw-menu-row">
+          <div class="cgw-menu-item"><div class="cgwmi-img">🥩</div><div class="cgwmi-name">Prime Cuts</div><div class="cgwmi-price">₹1,800</div></div>
+          <div class="cgw-menu-item"><div class="cgwmi-img">🦞</div><div class="cgwmi-name">Lobster Bisque</div><div class="cgwmi-price">₹1,200</div></div>
+          <div class="cgw-menu-item"><div class="cgwmi-img">🍮</div><div class="cgwmi-name">Crème Brûlée</div><div class="cgwmi-price">₹450</div></div>
+          <div class="cgw-menu-item"><div class="cgwmi-img">🍷</div><div class="cgwmi-name">Sommelier Pick</div><div class="cgwmi-price">₹900</div></div>
+        </div>
+        <div class="cg-label">Premium Restaurant Website</div>
       </div>
 
-      <!-- Social ad mockup -->
-      <div class="mockup mockup-social">
-        <div class="mockup-frame">
-          <div class="mockup-screen social-screen">
-            <div class="social-top" aria-hidden="true">
-              <div class="social-avatar"></div>
-              <div class="social-meta">
-                <div class="social-name"></div>
-                <div class="social-sub"></div>
-              </div>
-              <div class="social-badge">Sponsored</div>
-            </div>
-            <div class="social-img" aria-hidden="true">
-              <div class="social-img-gradient"></div>
-              <div class="social-img-tag">🔥 Now Open</div>
-            </div>
-            <div class="social-footer" aria-hidden="true">
-              <div class="social-cta-btn">Order Now →</div>
-              <div class="social-metrics">4.8× ROAS · 12K Reach</div>
-            </div>
+      <!-- AD PANEL -->
+      <div class="cg-ad cg-panel" data-reveal data-delay="150">
+        <div class="cga-header">
+          <div class="cga-avatar">🍔</div>
+          <div class="cga-meta">
+            <div class="cga-name">Flame &amp; Co. Mumbai</div>
+            <div class="cga-sp">Sponsored · Instagram Feed</div>
           </div>
         </div>
-        <div class="mockup-label">High-ROAS Ad Campaign</div>
+        <div class="cga-visual">
+          <img class="cga-food-img" src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=420&q=85" alt="" loading="lazy" />
+          <div class="cga-bg-gradient"></div>
+          <div class="cga-badge-now">🔥 Now Open · Bandra</div>
+          <div class="cga-roas-badge">4.8× ROAS</div>
+        </div>
+        <div class="cga-caption">Crispy on the outside. Juicy on the inside. Every bite tells a story.</div>
+        <div class="cga-foot">
+          <div class="cga-cta-btn">Order Now →</div>
+          <div class="cga-metrics">12K Reach · ₹4.2 CPR</div>
+        </div>
+        <div class="cg-label">High-ROAS Ad Creative</div>
       </div>
 
-      <!-- Dashboard mockup -->
-      <div class="mockup mockup-dash">
-        <div class="mockup-frame">
-          <div class="mockup-screen dash-screen">
-            <div class="dash-title" aria-hidden="true">Campaign Performance</div>
-            <div class="dash-kpis" aria-hidden="true">
-              <div class="dash-kpi"><span class="dk-num">5.1×</span><span class="dk-lbl">ROAS</span></div>
-              <div class="dash-kpi"><span class="dk-num">₹2.4L</span><span class="dk-lbl">Revenue</span></div>
-              <div class="dash-kpi"><span class="dk-num">38%</span><span class="dk-lbl">CTR↑</span></div>
-            </div>
-            <div class="dash-chart" aria-hidden="true">
-              <div class="dc-bar" style="--bh:55%"></div>
-              <div class="dc-bar" style="--bh:72%"></div>
-              <div class="dc-bar" style="--bh:48%"></div>
-              <div class="dc-bar" style="--bh:88%"></div>
-              <div class="dc-bar" style="--bh:65%"></div>
-              <div class="dc-bar" style="--bh:94%"></div>
-              <div class="dc-bar" style="--bh:78%"></div>
-            </div>
-          </div>
+      <!-- DASHBOARD PANEL -->
+      <div class="cg-dash cg-panel" data-reveal data-delay="200">
+        <div class="cgd-header">
+          <div class="cgd-title">Campaign Performance</div>
+          <div class="cgd-live"><span class="cgd-live-dot"></span>Live</div>
         </div>
-        <div class="mockup-label">Ads Dashboard</div>
+        <div class="cgd-kpis">
+          <div class="cgd-kpi"><span class="cgdk-val">5.1×</span><span class="cgdk-lbl">ROAS</span><span class="cgdk-trend">↑18%</span></div>
+          <div class="cgd-kpi"><span class="cgdk-val">₹2.4L</span><span class="cgdk-lbl">Revenue</span><span class="cgdk-trend">↑34%</span></div>
+          <div class="cgd-kpi"><span class="cgdk-val">38%</span><span class="cgdk-lbl">CTR</span><span class="cgdk-trend">↑12%</span></div>
+        </div>
+        <div class="cgd-chart">
+          <svg viewBox="0 0 280 64" preserveAspectRatio="none" class="cgd-svg">
+            <defs>
+              <linearGradient id="cgFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(200,155,94,0.35)"/>
+                <stop offset="100%" stop-color="rgba(200,155,94,0)"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,60 C50,50 90,42 130,30 C165,20 210,10 280,3 L280,64 L0,64 Z" fill="url(#cgFill)"/>
+            <path d="M0,60 C50,50 90,42 130,30 C165,20 210,10 280,3" stroke="#C89B5E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="280" cy="3" r="3.5" fill="#C89B5E"/>
+          </svg>
+          <div class="cgd-chart-label">Revenue Growth · Last 30 Days</div>
+        </div>
+        <div class="cgd-bars">
+          <div class="cgd-bar-row"><span class="cgdbr-day">Mon</span><div class="cgdbr-track"><div class="cgdbr-fill" style="--dw:45%"></div></div><span class="cgdbr-val">₹28K</span></div>
+          <div class="cgd-bar-row"><span class="cgdbr-day">Wed</span><div class="cgdbr-track"><div class="cgdbr-fill" style="--dw:68%"></div></div><span class="cgdbr-val">₹42K</span></div>
+          <div class="cgd-bar-row"><span class="cgdbr-day">Fri</span><div class="cgdbr-track"><div class="cgdbr-fill" style="--dw:82%"></div></div><span class="cgdbr-val">₹51K</span></div>
+          <div class="cgd-bar-row"><span class="cgdbr-day">Sat</span><div class="cgdbr-track"><div class="cgdbr-fill cgdbr-fill-peak" style="--dw:100%"></div></div><span class="cgdbr-val cgdbr-peak">₹62K</span></div>
+        </div>
+        <div class="cg-label">Ads Dashboard</div>
       </div>
+
     </div>
   </section>
 
@@ -553,6 +620,18 @@
   ═══════════════════════════════════════════ -->
   <section id="section-cta-banner">
     <div class="cta-banner-glow" aria-hidden="true"></div>
+    <div class="cta-particles" aria-hidden="true">
+      <span class="cp" style="--cx:8%;--cy:25%;--cs:3px;--cd:0s"></span>
+      <span class="cp" style="--cx:22%;--cy:65%;--cs:2px;--cd:1.3s"></span>
+      <span class="cp" style="--cx:55%;--cy:18%;--cs:4px;--cd:0.6s"></span>
+      <span class="cp" style="--cx:72%;--cy:78%;--cs:2px;--cd:2.1s"></span>
+      <span class="cp" style="--cx:88%;--cy:38%;--cs:3px;--cd:0.9s"></span>
+      <span class="cp" style="--cx:42%;--cy:88%;--cs:2px;--cd:1.6s"></span>
+      <span class="cp" style="--cx:80%;--cy:22%;--cs:3px;--cd:2.4s"></span>
+      <span class="cp" style="--cx:32%;--cy:50%;--cs:2px;--cd:0.4s"></span>
+      <span class="cp" style="--cx:65%;--cy:55%;--cs:3px;--cd:1.8s"></span>
+      <span class="cp" style="--cx:15%;--cy:80%;--cs:2px;--cd:3.2s"></span>
+    </div>
     <div class="container">
       <div class="cta-banner-inner" data-reveal>
         <div class="cta-banner-left">
@@ -675,7 +754,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-wordmark">Marketing Vision Hub</div>
-          <p class="footer-tagline">India's Premium Restaurant Growth Marketing Agency</p>
+          <p class="footer-tagline">Restaurant Growth Marketing Agency</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">

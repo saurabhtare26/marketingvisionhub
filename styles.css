@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -2279,18 +2280,22 @@ button:hover ~ #cursorDot { width: 12px; height: 12px; }
    RESPONSIVE
 ══════════════════════════════════════════════════════ */
 @media (max-width: 480px) {
+  /* Stats row — keep flex so dividers stay inline between columns */
   .stats-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    align-items: center;
     gap: 0;
-    padding: 1.1rem 0.75rem;
-    text-align: center;
+    padding: 1rem 0.6rem;
+    max-width: 100%;
   }
-  .stat-number { font-size: 1.45rem; }
-  .stat-label  { font-size: 0.55rem; }
-  .stat-divider { width: 1px; height: 2.2rem; }
+  .stat-col { flex: 1; text-align: center; }
+  .stat-number { font-size: 1.2rem; }
+  .stat-label  { font-size: 0.48rem; letter-spacing: 0.04em; }
+  .stat-divider { width: 1px; height: 1.8rem; flex-shrink: 0; }
+  /* WA button — icon only on mobile, pulled away from edge */
+  #waFloat { padding: 0.75rem; border-radius: 50%; right: 1rem; bottom: 1rem; }
   #waFloat .wa-label { display: none; }
-  #waFloat { padding: 0.8rem; border-radius: 50%; }
+  /* Form submit centred */
   .form-submit-row { text-align: center; }
   .btn-form-submit, #mc-embedded-subscribe { display: block !important; margin: 0 auto !important; width: auto !important; min-width: 220px !important; }
 }

@@ -460,14 +460,16 @@ button { cursor: pointer; border: none; background: none; }
 /* ── Marquee ─────────────────────────────────────────── */
 .hero-marquee {
   position: absolute;
-  bottom: 5.5rem;
+  bottom: 3rem;
   left: 0;
   right: 0;
   z-index: 3;
   overflow: hidden;
-  padding: 0.7rem 0;
-  border-top:    1px solid rgba(200,155,94,0.1);
-  border-bottom: 1px solid rgba(200,155,94,0.1);
+  padding: 0.85rem 0;
+  border-top:    1px solid rgba(200,155,94,0.08);
+  border-bottom: 1px solid rgba(200,155,94,0.08);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
 }
 
 .marquee-track { overflow: hidden; white-space: nowrap; }
@@ -475,25 +477,25 @@ button { cursor: pointer; border: none; background: none; }
 .marquee-inner {
   display: inline-flex;
   align-items: center;
-  gap: 2.5rem;
-  animation: marqueeScroll 22s linear infinite;
+  gap: 3rem;
+  animation: marqueeScroll 34s linear infinite;
   will-change: transform;
 }
 
 .marquee-inner span {
   font-family: var(--font-body);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(244,239,230,0.35);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: none;
+  color: rgba(244,239,230,0.28);
 }
 
 .marquee-inner .m-dot {
   color: var(--amber);
-  font-size: 0.38rem;
+  font-size: 0.3rem;
   letter-spacing: 0;
-  opacity: 0.6;
+  opacity: 0.45;
 }
 
 @keyframes marqueeScroll {
@@ -2315,7 +2317,40 @@ button:hover ~ #cursorDot { width: 12px; height: 12px; }
 }
 
 @media (max-width: 768px) {
-  .hero-inner { padding: 8rem 1.5rem 6rem; }
+  /* Hero: stack vertically so marquee flows below content, no overlap */
+  #hero {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .hero-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7rem 1.5rem 2.5rem;
+  }
+  .hero-marquee {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    padding: 1rem 0 1.5rem;
+    border-bottom: none;
+    border-top: 1px solid rgba(200,155,94,0.1);
+    margin-top: 0;
+  }
+  .marquee-inner {
+    gap: 2rem;
+    animation-duration: 28s;
+  }
+  .marquee-inner span {
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: rgba(244,239,230,0.22);
+  }
+  .marquee-inner .m-dot { opacity: 0.35; }
   .creative-grid { grid-template-columns: 1fr 1fr; padding: 1rem 1.5rem; }
   .cg-reel { grid-row: span 1; grid-column: span 2; }
   .cg-website { grid-column: span 2; }

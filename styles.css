@@ -127,6 +127,15 @@ button { cursor: pointer; border: none; background: none; }
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -484,18 +493,18 @@ button { cursor: pointer; border: none; background: none; }
 
 .marquee-inner span {
   font-family: var(--font-body);
-  font-size: 0.6rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: none;
-  color: rgba(244,239,230,0.28);
+  color: rgba(244,239,230,0.62);
 }
 
 .marquee-inner .m-dot {
   color: var(--amber);
-  font-size: 0.3rem;
+  font-size: 0.35rem;
   letter-spacing: 0;
-  opacity: 0.45;
+  opacity: 0.75;
 }
 
 @keyframes marqueeScroll {
@@ -955,13 +964,6 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 0.55rem; font-weight: 600; padding: 0.18rem 0.55rem;
   border: 1px solid rgba(244,239,230,0.5); border-radius: 4px; color: rgba(244,239,230,0.9);
 }
-.cgr-play {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.6rem; color: rgba(244,239,230,0.8);
-  text-shadow: 0 0 25px rgba(200,155,94,0.9);
-  z-index: 4; pointer-events: none;
-}
 .cgr-bottom { display: flex; flex-direction: column; gap: 0.32rem; }
 .cgr-caption { font-size: 0.63rem; font-weight: 500; color: rgba(244,239,230,0.92); text-shadow: 0 1px 5px rgba(0,0,0,0.9); }
 .cgr-music { font-size: 0.54rem; color: rgba(244,239,230,0.5); }
@@ -1175,10 +1177,11 @@ button { cursor: pointer; border: none; background: none; }
   z-index: 0;
 }
 
-.cgr-bg-img  { opacity: 0.62; }
+
+.cgr-bg-img  { opacity: 0.88; }
 .cgw-food-img { opacity: 0.88; }
 .cga-food-img { opacity: 0.72; }
-.hf-reel-img  { opacity: 0.58; }
+.hf-reel-img  { opacity: 0.92; filter: brightness(1.12) saturate(1.15); }
 
 /* Keep depth/gradient overlays above photos */
 .cgr-depth-1,
@@ -2017,8 +2020,7 @@ button:hover ~ #cursorDot { width: 12px; height: 12px; }
 .hf-reel-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(200,100,40,0.6), rgba(40,120,130,0.3));
-  animation: rG 4s ease-in-out infinite alternate;
+  background: linear-gradient(to top, rgba(10,8,6,0.72) 0%, rgba(10,8,6,0.08) 45%, transparent 100%);
 }
 
 .hf-reel-overlay {
@@ -2345,12 +2347,12 @@ button:hover ~ #cursorDot { width: 12px; height: 12px; }
     animation-duration: 28s;
   }
   .marquee-inner span {
-    font-size: 0.58rem;
-    font-weight: 300;
+    font-size: 0.62rem;
+    font-weight: 500;
     letter-spacing: 0.18em;
-    color: rgba(244,239,230,0.22);
+    color: rgba(244,239,230,0.55);
   }
-  .marquee-inner .m-dot { opacity: 0.35; }
+  .marquee-inner .m-dot { opacity: 0.65; }
   .creative-grid { grid-template-columns: 1fr 1fr; padding: 1rem 1.5rem; }
   .cg-reel { grid-row: span 1; grid-column: span 2; }
   .cg-website { grid-column: span 2; }
